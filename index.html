@@ -6,366 +6,543 @@
   <title>Bruno Miñana Martínez</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    body {
-      background: #f4f7fb;
-      color: #172033;
-      line-height: 1.6;
+    html{
+      scroll-behavior:smooth;
     }
 
-    header {
-      min-height: 100vh;
-      padding: 60px 8%;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(135deg, #071527, #123f73);
-      color: white;
+    body{
+      background:#f5f7fb;
+      color:#1b2430;
+      line-height:1.7;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 50px;
-      align-items: center;
-      width: 100%;
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      align-items:center;
+      padding:80px 8%;
+      background:
+      linear-gradient(rgba(6,24,48,0.82), rgba(6,24,48,0.82)),
+      url("foto3.jpg");
+      background-size:cover;
+      background-position:center;
+      color:white;
+      gap:60px;
     }
 
-    .hero h1 {
-      font-size: 56px;
-      line-height: 1.1;
-      margin-bottom: 18px;
+    .tag{
+      font-size:14px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:#8eb9e7;
+      margin-bottom:20px;
+      font-weight:bold;
     }
 
-    .hero h2 {
-      font-size: 22px;
-      color: #c8ddf5;
-      font-weight: 400;
-      margin-bottom: 25px;
+    .hero h1{
+      font-size:68px;
+      line-height:1.05;
+      margin-bottom:20px;
+      max-width:700px;
     }
 
-    .hero p {
-      font-size: 18px;
-      max-width: 650px;
-      margin-bottom: 30px;
+    .hero h2{
+      font-size:26px;
+      color:#dce8f5;
+      font-weight:400;
+      margin-bottom:30px;
+      max-width:650px;
     }
 
-    .hero img {
-      width: 100%;
-      max-height: 650px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 30px;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    .hero p{
+      font-size:18px;
+      max-width:650px;
+      margin-bottom:40px;
+      color:#d8e3ee;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      background: white;
-      color: #071527;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 10px;
+    .buttons{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
     }
 
-    section {
-      padding: 80px 8%;
+    .btn{
+      padding:15px 28px;
+      border-radius:40px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    .section-title {
-      font-size: 36px;
-      color: #071527;
-      margin-bottom: 35px;
+    .btn-primary{
+      background:white;
+      color:#061830;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 35px;
+    .btn-secondary{
+      border:2px solid rgba(255,255,255,0.3);
+      color:white;
     }
 
-    .card {
-      background: white;
-      padding: 32px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    .btn:hover{
+      transform:translateY(-2px);
     }
 
-    .card h3 {
-      color: #123f73;
-      margin-bottom: 12px;
-      font-size: 22px;
+    .hero img{
+      width:100%;
+      max-height:720px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:30px;
+      box-shadow:0 30px 70px rgba(0,0,0,0.4);
     }
 
-    .card img {
-      width: 100%;
-      border-radius: 22px;
-      margin-bottom: 20px;
-      object-fit: cover;
-      max-height: 520px;
-      object-position: center top;
+    /* GENERAL */
+
+    section{
+      padding:90px 8%;
     }
 
-    .timeline {
-      display: grid;
-      gap: 25px;
+    .section-title{
+      font-size:42px;
+      margin-bottom:45px;
+      color:#061830;
     }
 
-    .job {
-      border-left: 5px solid #123f73;
-      padding-left: 25px;
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:35px;
     }
 
-    .job h3 {
-      color: #071527;
-      font-size: 24px;
+    .card{
+      background:white;
+      border-radius:28px;
+      padding:35px;
+      box-shadow:0 12px 35px rgba(0,0,0,0.06);
     }
 
-    .job span {
-      display: block;
-      color: #5c718a;
-      font-weight: bold;
-      margin: 8px 0 12px;
+    .card h3{
+      font-size:24px;
+      margin-bottom:15px;
+      color:#123f73;
     }
 
-    ul {
-      padding-left: 20px;
+    .card p{
+      color:#475467;
     }
 
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    /* EXPERIENCE */
+
+    .timeline{
+      display:grid;
+      gap:28px;
     }
 
-    .skill {
-      background: white;
-      padding: 22px;
-      border-radius: 18px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
-      font-weight: bold;
-      color: #123f73;
+    .job{
+      background:white;
+      border-radius:24px;
+      padding:35px;
+      border-left:6px solid #123f73;
+      box-shadow:0 12px 35px rgba(0,0,0,0.05);
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    .job h3{
+      font-size:28px;
+      color:#061830;
+      margin-bottom:10px;
     }
 
-    .gallery img {
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 24px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    .job span{
+      display:block;
+      margin-bottom:18px;
+      color:#6b7280;
+      font-weight:bold;
     }
 
-    .contact {
-      background: #071527;
-      color: white;
-      text-align: center;
+    .job p{
+      color:#475467;
     }
 
-    .contact h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
+    /* SKILLS */
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
     }
 
-    .contact a {
-      color: #c8ddf5;
-      text-decoration: none;
-      font-weight: bold;
+    .skill{
+      background:white;
+      padding:28px;
+      border-radius:22px;
+      text-align:center;
+      font-weight:bold;
+      color:#123f73;
+      box-shadow:0 10px 28px rgba(0,0,0,0.05);
     }
 
-    footer {
-      background: #030b15;
-      color: #b8c7d9;
-      text-align: center;
-      padding: 25px;
+    /* PERSONAL */
+
+    .personal{
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:50px;
+      align-items:center;
     }
 
-    @media (max-width: 900px) {
+    .personal img{
+      width:100%;
+      border-radius:28px;
+      object-fit:cover;
+      box-shadow:0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    .personal h3{
+      font-size:34px;
+      margin-bottom:20px;
+      color:#061830;
+    }
+
+    .personal p{
+      color:#475467;
+      font-size:18px;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      background:#061830;
+      color:white;
+      text-align:center;
+    }
+
+    .contact h2{
+      font-size:42px;
+      margin-bottom:30px;
+    }
+
+    .contact p{
+      margin-bottom:14px;
+      font-size:20px;
+    }
+
+    .contact a{
+      color:#cde4ff;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    footer{
+      background:#020c18;
+      color:#9db2c7;
+      text-align:center;
+      padding:25px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:950px){
+
       .hero,
-      .grid,
+      .grid-2,
       .skills,
-      .gallery {
-        grid-template-columns: 1fr;
+      .personal{
+        grid-template-columns:1fr;
       }
 
-      .hero h1 {
-        font-size: 40px;
+      .hero{
+        padding-top:120px;
       }
 
-      .gallery img {
-        height: 500px;
+      .hero h1{
+        font-size:48px;
       }
+
+      .hero h2{
+        font-size:22px;
+      }
+
+      .skills{
+        grid-template-columns:1fr;
+      }
+
     }
+
   </style>
+
 </head>
 
 <body>
 
-  <header>
-    <div class="hero">
-      <div>
-        <h1>Bruno Miñana Martínez</h1>
-        <h2>Healthcare Sales · Key Account Management · Medical Technology</h2>
-        <p>
-          Profesional del sector sanitario con amplia experiencia en gestión comercial,
-          cuentas clave hospitalarias, tecnología médica, imagen diagnóstica y desarrollo
-          de relaciones estratégicas con profesionales sanitarios.
-        </p>
+  <!-- HERO -->
 
-        <a href="#experiencia" class="btn">Ver experiencia</a>
-        <a href="#contacto" class="btn">Contacto</a>
+  <header class="hero">
+
+    <div>
+
+      <div class="tag">
+        HEALTHCARE · MEDICAL TECHNOLOGY · KEY ACCOUNT MANAGEMENT
       </div>
 
-      <img src="foto1.jpeg" alt="Bruno Miñana Martínez">
+      <h1>
+        Bruno Miñana Martínez
+      </h1>
+
+      <h2>
+        Commercial leader in healthcare technology and hospital key accounts
+      </h2>
+
+      <p>
+        Profesional con más de 25 años de experiencia en el sector sanitario,
+        especializado en tecnología médica, cuentas hospitalarias,
+        desarrollo de negocio y relaciones estratégicas con profesionales sanitarios.
+      </p>
+
+      <div class="buttons">
+        <a href="#experiencia" class="btn btn-primary">
+          Ver trayectoria
+        </a>
+
+        <a href="#contacto" class="btn btn-secondary">
+          Contacto
+        </a>
+      </div>
+
     </div>
+
+    <div>
+      <img src="foto1.jpg" alt="Bruno Miñana Martínez">
+    </div>
+
   </header>
 
+  <!-- PERFIL -->
+
   <section>
-    <h2 class="section-title">Perfil profesional</h2>
 
-    <div class="grid">
+    <h2 class="section-title">
+      Perfil ejecutivo
+    </h2>
+
+    <div class="grid-2">
+
       <div class="card">
-        <h3>Especialización</h3>
+        <h3>
+          Especialización
+        </h3>
+
         <p>
-          Experiencia consolidada en el entorno hospitalario, gestión de cuentas clave,
-          negociación, licitaciones, desarrollo de negocio y acompañamiento técnico-comercial
-          en soluciones sanitarias.
+          Amplia experiencia en tecnología médica,
+          negociación hospitalaria, gestión de cuentas clave,
+          licitaciones y desarrollo comercial en compañías líderes del sector salud.
         </p>
       </div>
 
       <div class="card">
-        <img src="foto2.jpeg" alt="Bruno Miñana traje">
-        <h3>Trayectoria</h3>
+        <h3>
+          Áreas de conocimiento
+        </h3>
+
         <p>
-          Más de 25 años de experiencia en compañías líderes del sector salud,
-          trabajando con hospitales, equipos médicos, gestores y profesionales sanitarios.
+          Radiología, medicina nuclear, cardiología,
+          neurología, farmacia hospitalaria, hemodinámica,
+          cirugía y soluciones diagnósticas avanzadas.
         </p>
       </div>
+
     </div>
+
   </section>
 
+  <!-- EXPERIENCIA -->
+
   <section id="experiencia">
-    <h2 class="section-title">Experiencia profesional</h2>
+
+    <h2 class="section-title">
+      Experiencia profesional
+    </h2>
 
     <div class="timeline">
 
-      <div class="card job">
-        <h3>FUJIFILM Healthcare</h3>
-        <span>División Modalities · Desde febrero de 2026</span>
+      <div class="job">
+        <h3>
+          FUJIFILM Healthcare
+        </h3>
+
+        <span>
+          División Modalities · Desde febrero 2026
+        </span>
+
         <p>
-          Desarrollo comercial y gestión de soluciones de tecnología médica dentro de la
-          división Modalities, orientado al entorno hospitalario y diagnóstico.
+          Desarrollo comercial y gestión de soluciones
+          de tecnología médica orientadas al entorno hospitalario
+          y diagnóstico avanzado.
         </p>
       </div>
 
-      <div class="card job">
-        <h3>Territory Manager · Olympus Iberia S.A.U.</h3>
-        <span>Abril 2024 - Febrero 2026</span>
+      <div class="job">
+        <h3>
+          Territory Manager · Olympus Iberia
+        </h3>
+
+        <span>
+          Abril 2024 - Febrero 2026
+        </span>
+
         <p>
-          Gestión territorial de productos y servicios médicos en áreas quirúrgicas y
-          ginecológicas. Relación con cirujanos, ginecólogos, administradores hospitalarios
-          y equipos clínicos.
+          Gestión territorial de productos y servicios médicos
+          en áreas quirúrgicas y ginecológicas.
         </p>
       </div>
 
-      <div class="card job">
-        <h3>Gerente de Cuentas KAM · GE Healthcare</h3>
-        <span>Abril 2000 - Febrero 2024</span>
+      <div class="job">
+        <h3>
+          Gerente de Cuentas KAM · GE Healthcare
+        </h3>
+
+        <span>
+          Abril 2000 - Febrero 2024
+        </span>
+
         <p>
-          Gestión de cuentas estratégicas en farmacia hospitalaria, hemodinámica,
-          radiología, medicina nuclear, digestivo, neurología y cardiología.
+          Gestión estratégica de cuentas hospitalarias en
+          radiología, cardiología, neurología,
+          medicina nuclear y farmacia hospitalaria.
         </p>
       </div>
 
-      <div class="card job">
-        <h3>Especialista en Nutrición y Fluidoterapia · Grifols Movaco</h3>
-        <span>Noviembre 1996 - Abril 2000</span>
+      <div class="job">
+        <h3>
+          Especialista en Nutrición y Fluidoterapia · Grifols
+        </h3>
+
+        <span>
+          Noviembre 1996 - Abril 2000
+        </span>
+
         <p>
-          Soporte técnico y educativo en productos de nutrición clínica, fluidoterapia,
-          UCI, reanimación, dietética y nutrición.
+          Soporte técnico y educativo en nutrición clínica,
+          fluidoterapia y cuidados críticos hospitalarios.
         </p>
       </div>
 
     </div>
+
   </section>
 
-  <section>
-    <h2 class="section-title">Formación</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Licenciado en Farmacia</h3>
-        <p>Universidad de Valencia · 1990 - 1996</p>
-      </div>
-
-      <div class="card">
-        <h3>Máster en Gestión Comercial y Marketing</h3>
-        <p>ESIC · 2004 - 2005</p>
-      </div>
-
-      <div class="card">
-        <h3>Máster en Gestión de Oficina de Farmacia</h3>
-        <p>Universidad de Barcelona · 2013 - 2015</p>
-      </div>
-
-      <div class="card">
-        <h3>Idiomas</h3>
-        <p>Español · Valenciano · Inglés</p>
-      </div>
-    </div>
-  </section>
+  <!-- SKILLS -->
 
   <section>
-    <h2 class="section-title">Competencias clave</h2>
+
+    <h2 class="section-title">
+      Competencias clave
+    </h2>
 
     <div class="skills">
-      <div class="skill">Gestión de cuentas clave</div>
-      <div class="skill">Negociación comercial</div>
-      <div class="skill">Sector hospitalario</div>
-      <div class="skill">Tecnología médica</div>
-      <div class="skill">Licitaciones y compras</div>
-      <div class="skill">Relación con clientes</div>
-      <div class="skill">Desarrollo de negocio</div>
-      <div class="skill">Comunicación técnica</div>
-      <div class="skill">CRM y seguimiento comercial</div>
+
+      <div class="skill">
+        Key Account Management
+      </div>
+
+      <div class="skill">
+        Tecnología médica
+      </div>
+
+      <div class="skill">
+        Negociación hospitalaria
+      </div>
+
+      <div class="skill">
+        Desarrollo de negocio
+      </div>
+
+      <div class="skill">
+        Gestión comercial
+      </div>
+
+      <div class="skill">
+        Relaciones estratégicas
+      </div>
+
     </div>
+
   </section>
+
+  <!-- PERSONAL -->
 
   <section>
-    <h2 class="section-title">Imagen profesional</h2>
 
-    <div class="gallery">
-      <img src="foto1.jpeg" alt="Bruno Miñana profesional">
-      <img src="foto2.jpeg" alt="Bruno Miñana traje">
-      <img src="foto3.jpeg" alt="Bruno Miñana retrato">
+    <div class="personal">
+
+      <img src="foto2.jpg" alt="Bruno Miñana">
+
+      <div>
+
+        <h3>
+          Más allá del entorno profesional
+        </h3>
+
+        <p>
+          Profesional orientado a las relaciones humanas,
+          el aprendizaje continuo y el equilibrio entre innovación,
+          salud y desarrollo personal.
+          <br><br>
+          Apasionado por el mar, la tecnología y el trabajo
+          en equipo dentro del entorno sanitario.
+        </p>
+
+      </div>
+
     </div>
+
   </section>
 
+  <!-- CONTACTO -->
+
   <section id="contacto" class="contact">
-    <h2>Contacto</h2>
+
+    <h2>
+      Contacto
+    </h2>
+
+    <p>
+      📧
+      <a href="mailto:bruminana@gmail.com">
+        bruminana@gmail.com
+      </a>
+    </p>
+
+    <p>
+      📱
+      <a href="tel:+34607754845">
+        +34 607 754 845
+      </a>
+    </p>
+
     <p>
       LinkedIn:
       <a href="https://www.linkedin.com/in/bruno-miñana-martínez" target="_blank">
         Bruno Miñana Martínez
       </a>
     </p>
+
   </section>
 
   <footer>
-    <p>© 2026 Bruno Miñana Martínez · Healthcare Sales & Medical Technology</p>
+    © 2026 Bruno Miñana Martínez · Healthcare & Medical Technology
   </footer>
 
 </body>
