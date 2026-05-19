@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruno Miñana Martínez</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      padding: 60px 8%;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #071527, #123f73);
+      color: white;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: 22px;
+      color: #c8ddf5;
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .hero img {
+      width: 100%;
+      max-height: 650px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 30px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      background: white;
+      color: #071527;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      font-size: 36px;
+      color: #071527;
+      margin-bottom: 35px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      color: #123f73;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 22px;
+      margin-bottom: 20px;
+      object-fit: cover;
+      max-height: 520px;
+      object-position: center top;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 25px;
+    }
+
+    .job {
+      border-left: 5px solid #123f73;
+      padding-left: 25px;
+    }
+
+    .job h3 {
+      color: #071527;
+      font-size: 24px;
+    }
+
+    .job span {
+      display: block;
+      color: #5c718a;
+      font-weight: bold;
+      margin: 8px 0 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill {
+      background: white;
+      padding: 22px;
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+      font-weight: bold;
+      color: #123f73;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .contact {
+      background: #071527;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .contact a {
+      color: #c8ddf5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #030b15;
+      color: #b8c7d9;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid,
+      .skills,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .gallery img {
+        height: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <div>
+        <h1>Bruno Miñana Martínez</h1>
+        <h2>Healthcare Sales · Key Account Management · Medical Technology</h2>
+        <p>
+          Profesional del sector sanitario con amplia experiencia en gestión comercial,
+          cuentas clave hospitalarias, tecnología médica, imagen diagnóstica y desarrollo
+          de relaciones estratégicas con profesionales sanitarios.
+        </p>
+
+        <a href="#experiencia" class="btn">Ver experiencia</a>
+        <a href="#contacto" class="btn">Contacto</a>
+      </div>
+
+      <img src="images/foto1.jpg" alt="Bruno Miñana Martínez">
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">Perfil profesional</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Especialización</h3>
+        <p>
+          Experiencia consolidada en el entorno hospitalario, gestión de cuentas clave,
+          negociación, licitaciones, desarrollo de negocio y acompañamiento técnico-comercial
+          en soluciones sanitarias.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="images/foto2.jpg" alt="Bruno Miñana traje">
+        <h3>Trayectoria</h3>
+        <p>
+          Más de 25 años de experiencia en compañías líderes del sector salud,
+          trabajando con hospitales, equipos médicos, gestores y profesionales sanitarios.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <h2 class="section-title">Experiencia profesional</h2>
+
+    <div class="timeline">
+
+      <div class="card job">
+        <h3>FUJIFILM Healthcare</h3>
+        <span>División Modalities · Desde febrero de 2026</span>
+        <p>
+          Desarrollo comercial y gestión de soluciones de tecnología médica dentro de la
+          división Modalities, orientado al entorno hospitalario y diagnóstico.
+        </p>
+      </div>
+
+      <div class="card job">
+        <h3>Territory Manager · Olympus Iberia S.A.U.</h3>
+        <span>Abril 2024 - Febrero 2026</span>
+        <p>
+          Gestión territorial de productos y servicios médicos en áreas quirúrgicas y
+          ginecológicas. Relación con cirujanos, ginecólogos, administradores hospitalarios
+          y equipos clínicos.
+        </p>
+      </div>
+
+      <div class="card job">
+        <h3>Gerente de Cuentas KAM · GE Healthcare</h3>
+        <span>Abril 2000 - Febrero 2024</span>
+        <p>
+          Gestión de cuentas estratégicas en farmacia hospitalaria, hemodinámica,
+          radiología, medicina nuclear, digestivo, neurología y cardiología.
+        </p>
+      </div>
+
+      <div class="card job">
+        <h3>Especialista en Nutrición y Fluidoterapia · Grifols Movaco</h3>
+        <span>Noviembre 1996 - Abril 2000</span>
+        <p>
+          Soporte técnico y educativo en productos de nutrición clínica, fluidoterapia,
+          UCI, reanimación, dietética y nutrición.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Formación</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Licenciado en Farmacia</h3>
+        <p>Universidad de Valencia · 1990 - 1996</p>
+      </div>
+
+      <div class="card">
+        <h3>Máster en Gestión Comercial y Marketing</h3>
+        <p>ESIC · 2004 - 2005</p>
+      </div>
+
+      <div class="card">
+        <h3>Máster en Gestión de Oficina de Farmacia</h3>
+        <p>Universidad de Barcelona · 2013 - 2015</p>
+      </div>
+
+      <div class="card">
+        <h3>Idiomas</h3>
+        <p>Español · Valenciano · Inglés</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Competencias clave</h2>
+
+    <div class="skills">
+      <div class="skill">Gestión de cuentas clave</div>
+      <div class="skill">Negociación comercial</div>
+      <div class="skill">Sector hospitalario</div>
+      <div class="skill">Tecnología médica</div>
+      <div class="skill">Licitaciones y compras</div>
+      <div class="skill">Relación con clientes</div>
+      <div class="skill">Desarrollo de negocio</div>
+      <div class="skill">Comunicación técnica</div>
+      <div class="skill">CRM y seguimiento comercial</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Imagen profesional</h2>
+
+    <div class="gallery">
+      <img src="images/foto1.jpg" alt="Bruno Miñana profesional">
+      <img src="images/foto2.jpg" alt="Bruno Miñana traje">
+      <img src="images/foto3.jpg" alt="Bruno Miñana retrato">
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/bruno-miñana-martínez" target="_blank">
+        Bruno Miñana Martínez
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Bruno Miñana Martínez · Healthcare Sales & Medical Technology</p>
+  </footer>
+
+</body>
+</html>
