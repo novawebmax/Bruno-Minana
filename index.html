@@ -6,35 +6,17 @@
   <title>Bruno Miñana Martínez</title>
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, Helvetica, sans-serif;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      background:#f5f7fb;
-      color:#1b2430;
-      line-height:1.7;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+    html{scroll-behavior:smooth}
+    body{background:#f5f7fb;color:#1b2430;line-height:1.7}
 
     .hero{
       min-height:100vh;
       display:grid;
-      grid-template-columns:1.1fr 0.9fr;
+      grid-template-columns:1.1fr .9fr;
       align-items:center;
       padding:80px 8%;
-      background:
-      linear-gradient(rgba(6,24,48,0.82), rgba(6,24,48,0.82)),
-      url("foto3.jpeg");
-      background-size:cover;
-      background-position:center;
+      background:linear-gradient(135deg,#071527,#123f73);
       color:white;
       gap:60px;
     }
@@ -48,55 +30,14 @@
       font-weight:bold;
     }
 
-    .hero h1{
-      font-size:68px;
-      line-height:1.05;
-      margin-bottom:20px;
-      max-width:700px;
-    }
+    .hero h1{font-size:64px;line-height:1.05;margin-bottom:20px}
+    .hero h2{font-size:25px;color:#dce8f5;font-weight:400;margin-bottom:30px}
+    .hero p{font-size:18px;max-width:680px;margin-bottom:40px;color:#d8e3ee}
 
-    .hero h2{
-      font-size:26px;
-      color:#dce8f5;
-      font-weight:400;
-      margin-bottom:30px;
-      max-width:650px;
-    }
-
-    .hero p{
-      font-size:18px;
-      max-width:650px;
-      margin-bottom:40px;
-      color:#d8e3ee;
-    }
-
-    .buttons{
-      display:flex;
-      gap:15px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      padding:15px 28px;
-      border-radius:40px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .btn-primary{
-      background:white;
-      color:#061830;
-    }
-
-    .btn-secondary{
-      border:2px solid rgba(255,255,255,0.3);
-      color:white;
-    }
-
-    .btn:hover{
-      transform:translateY(-2px);
-    }
+    .buttons{display:flex;gap:15px;flex-wrap:wrap}
+    .btn{padding:15px 28px;border-radius:40px;text-decoration:none;font-weight:bold}
+    .btn-primary{background:white;color:#061830}
+    .btn-secondary{border:2px solid rgba(255,255,255,.35);color:white}
 
     .hero img{
       width:100%;
@@ -104,91 +45,45 @@
       object-fit:cover;
       object-position:center top;
       border-radius:30px;
-      box-shadow:0 30px 70px rgba(0,0,0,0.4);
+      box-shadow:0 30px 70px rgba(0,0,0,.4);
     }
 
-    section{
-      padding:90px 8%;
-    }
+    section{padding:90px 8%}
+    .section-title{font-size:40px;margin-bottom:45px;color:#061830}
 
-    .section-title{
-      font-size:42px;
-      margin-bottom:45px;
-      color:#061830;
-    }
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:35px}
 
-    .grid-2{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:35px;
-    }
-
-    .card{
+    .card,.job{
       background:white;
-      border-radius:28px;
+      border-radius:26px;
       padding:35px;
-      box-shadow:0 12px 35px rgba(0,0,0,0.06);
+      box-shadow:0 12px 35px rgba(0,0,0,.06);
     }
 
-    .card h3{
-      font-size:24px;
-      margin-bottom:15px;
-      color:#123f73;
-    }
+    .card h3,.job h3{font-size:24px;margin-bottom:15px;color:#123f73}
+    .card p,.job p,.job li{color:#475467}
+    .timeline{display:grid;gap:28px}
 
-    .card p{
-      color:#475467;
-    }
+    .job{border-left:6px solid #123f73}
+    .job span{display:block;margin-bottom:18px;color:#6b7280;font-weight:bold}
+    .job ul{padding-left:22px;margin-top:15px}
+    .job p + p{margin-top:16px}
 
-    .timeline{
-      display:grid;
-      gap:28px;
-    }
-
-    .job{
-      background:white;
-      border-radius:24px;
-      padding:35px;
-      border-left:6px solid #123f73;
-      box-shadow:0 12px 35px rgba(0,0,0,0.05);
-    }
-
-    .job h3{
-      font-size:28px;
-      color:#061830;
-      margin-bottom:10px;
-    }
-
-    .job span{
-      display:block;
-      margin-bottom:18px;
-      color:#6b7280;
-      font-weight:bold;
-    }
-
-    .job p{
-      color:#475467;
-    }
-
-    .skills{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 
     .skill{
       background:white;
-      padding:28px;
+      padding:26px;
       border-radius:22px;
       text-align:center;
       font-weight:bold;
       color:#123f73;
-      box-shadow:0 10px 28px rgba(0,0,0,0.05);
+      box-shadow:0 10px 28px rgba(0,0,0,.05);
     }
 
     .personal{
       display:grid;
-      grid-template-columns:0.9fr 1.1fr;
+      grid-template-columns:.9fr 1.1fr;
       gap:50px;
       align-items:center;
     }
@@ -197,327 +92,243 @@
       width:100%;
       border-radius:28px;
       object-fit:cover;
-      box-shadow:0 20px 50px rgba(0,0,0,0.15);
+      box-shadow:0 20px 50px rgba(0,0,0,.15);
     }
 
-    .personal h3{
-      font-size:34px;
-      margin-bottom:20px;
-      color:#061830;
-    }
+    .personal h3{font-size:34px;margin-bottom:20px;color:#061830}
+    .personal p{color:#475467;font-size:18px}
 
-    .personal p{
-      color:#475467;
-      font-size:18px;
-    }
+    .contact{background:#061830;color:white;text-align:center}
+    .contact h2{font-size:40px;margin-bottom:30px}
+    .contact p{margin-bottom:14px;font-size:20px}
+    .contact a{color:#cde4ff;text-decoration:none;font-weight:bold}
 
-    .contact{
-      background:#061830;
-      color:white;
-      text-align:center;
-    }
-
-    .contact h2{
-      font-size:42px;
-      margin-bottom:30px;
-    }
-
-    .contact p{
-      margin-bottom:14px;
-      font-size:20px;
-    }
-
-    .contact a{
-      color:#cde4ff;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    footer{
-      background:#020c18;
-      color:#9db2c7;
-      text-align:center;
-      padding:25px;
-    }
+    footer{background:#020c18;color:#9db2c7;text-align:center;padding:25px}
 
     @media(max-width:950px){
-
-      .hero,
-      .grid-2,
-      .skills,
-      .personal{
-        grid-template-columns:1fr;
-      }
-
-      .hero{
-        padding-top:120px;
-      }
-
-      .hero h1{
-        font-size:48px;
-      }
-
-      .hero h2{
-        font-size:22px;
-      }
-
-      .skills{
-        grid-template-columns:1fr;
-      }
-
+      .hero,.grid-2,.skills,.personal{grid-template-columns:1fr}
+      .hero{padding-top:100px}
+      .hero h1{font-size:44px}
+      .skills{grid-template-columns:1fr}
     }
-
   </style>
-
 </head>
 
 <body>
 
-  <header class="hero">
+<header class="hero">
+  <div>
+    <div class="tag">Healthcare · Medical Technology · Key Account Management</div>
 
-    <div>
+    <h1>Bruno Miñana Martínez</h1>
 
-      <div class="tag">
-        HEALTHCARE · MEDICAL TECHNOLOGY · KEY ACCOUNT MANAGEMENT
-      </div>
+    <h2>Commercial leader in healthcare technology and hospital key accounts</h2>
 
-      <h1>
-        Bruno Miñana Martínez
-      </h1>
+    <p>
+      Más de 29 años de experiencia en el sector sanitario, desarrollando negocio,
+      gestionando cuentas estratégicas hospitalarias e impulsando la adopción de
+      tecnologías médicas innovadoras en compañías líderes como FUJIFILM, Olympus,
+      GE Healthcare y Grifols.
+    </p>
 
-      <h2>
-        Commercial leader in healthcare technology and hospital key accounts
-      </h2>
+    <div class="buttons">
+      <a href="#experiencia" class="btn btn-primary">Ver trayectoria</a>
+      <a href="#contacto" class="btn btn-secondary">Contacto</a>
+    </div>
+  </div>
+
+  <div>
+    <img src="foto1.jpeg" alt="Bruno Miñana Martínez">
+  </div>
+</header>
+
+<section>
+  <h2 class="section-title">Perfil ejecutivo</h2>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>Especialización</h3>
+      <p>
+        Experiencia consolidada en tecnología médica, diagnóstico por imagen,
+        medicina nuclear, quirófano, negociación hospitalaria, licitaciones,
+        contratación pública y gestión de grandes cuentas sanitarias.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Áreas de conocimiento</h3>
+      <p>
+        Radiología, medicina nuclear, cardiología, neurología, farmacia hospitalaria,
+        hemodinámica, cirugía, ginecología, urología y soluciones diagnósticas avanzadas.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <h2 class="section-title">Experiencia profesional</h2>
+
+  <div class="timeline">
+
+    <div class="job">
+      <h3>FUJIFILM Healthcare</h3>
+      <span>División Modalities · Desde febrero 2026</span>
+      <p>
+        Desarrollo comercial y gestión de soluciones de tecnología médica orientadas
+        al entorno hospitalario y diagnóstico avanzado dentro de la división Modalities.
+      </p>
+    </div>
+
+    <div class="job">
+      <h3>Territory Manager · Olympus Iberia</h3>
+      <span>Abril 2024 - Febrero 2026</span>
+      <ul>
+        <li>Gestión de una cartera de hospitales públicos y privados en Comunidad Valenciana y Región de Murcia.</li>
+        <li>Desarrollo de proyectos de introducción de tecnologías de energía avanzada y equipamiento quirúrgico.</li>
+        <li>Formación y soporte clínico a equipos quirúrgicos durante procedimientos complejos.</li>
+        <li>Participación activa en procesos de compra pública y negociaciones hospitalarias.</li>
+        <li>Impulso de la adopción de nuevas tecnologías en Cirugía General, Ginecología, Urología y Cirugía Torácica.</li>
+        <li>Coordinación multidisciplinar entre usuarios clínicos, ingeniería hospitalaria, compras y dirección médica.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Gerente de Cuentas KAM · GE Healthcare</h3>
+      <span>Abril 2000 - Febrero 2024</span>
 
       <p>
-        Profesional con más de 25 años de experiencia en el sector sanitario,
-        especializado en tecnología médica, cuentas hospitalarias,
-        desarrollo de negocio y relaciones estratégicas con profesionales sanitarios.
+        Responsable de la gestión estratégica de cuentas hospitalarias en el área de
+        Diagnóstico por Imagen y Medicina Nuclear, liderando el desarrollo comercial
+        de medios de contraste, radiofármacos y soluciones diagnósticas avanzadas
+        en Comunidad Valenciana, Murcia, Albacete, Cuenca e Islas Canarias.
       </p>
 
-      <div class="buttons">
-        <a href="#experiencia" class="btn btn-primary">
-          Ver trayectoria
-        </a>
+      <p>
+        Gestión de relaciones institucionales con servicios clínicos, farmacia hospitalaria
+        y direcciones hospitalarias, participando en proyectos de innovación tecnológica,
+        contratación pública y lanzamiento de nuevos productos de alto valor añadido.
+      </p>
 
-        <a href="#contacto" class="btn btn-secondary">
-          Contacto
-        </a>
-      </div>
-
+      <ul>
+        <li>Gestión integral de grandes cuentas hospitalarias y servicios clínicos de Radiología, Cardiología, Neurología, Medicina Nuclear y Farmacia Hospitalaria.</li>
+        <li>Desarrollo comercial de medios de contraste para Resonancia Magnética, Tomografía Computarizada y procedimientos intervencionistas.</li>
+        <li>Introducción y posicionamiento de radiofármacos y soluciones para Medicina Nuclear y diagnóstico molecular.</li>
+        <li>Gestión de proyectos estratégicos y lanzamiento de productos innovadores, incluyendo tecnologías de diagnóstico fotodinámico para Urología.</li>
+        <li>Participación en concursos públicos, negociación de acuerdos marco y contratación hospitalaria.</li>
+        <li>Colaboración con direcciones médicas, servicios clínicos, farmacia hospitalaria, compras e ingeniería biomédica.</li>
+        <li>Identificación y desarrollo de oportunidades de negocio orientadas a mejorar la eficiencia diagnóstica y la calidad asistencial.</li>
+        <li>Coordinación con equipos de marketing, medical affairs y aplicaciones clínicas para la implantación de nuevas soluciones diagnósticas.</li>
+      </ul>
     </div>
+
+    <div class="job">
+      <h3>Especialista en Nutrición y Fluidoterapia · Grifols Movaco</h3>
+      <span>Noviembre 1996 - Abril 2000</span>
+
+      <p>
+        Soporte técnico y educativo en nutrición clínica, fluidoterapia,
+        UCI, reanimación, dietética y nutrición hospitalaria.
+      </p>
+
+      <p>
+        Responsable del soporte técnico y la formación clínica en nutrición especializada
+        y fluidoterapia hospitalaria, colaborando estrechamente con servicios de Farmacia
+        Hospitalaria, UCI, Anestesia y Nutrición Clínica.
+      </p>
+
+      <p>
+        Esta experiencia constituyó la base de mi desarrollo profesional en el sector
+        sanitario, permitiéndome conocer en profundidad la organización hospitalaria,
+        los procesos asistenciales y la importancia de la relación entre la industria
+        y los profesionales sanitarios.
+      </p>
+
+      <p>
+        Además, me brindó la oportunidad de iniciar mi trayectoria en el ámbito comercial,
+        desarrollando competencias en asesoramiento, negociación y gestión de relaciones
+        con clientes que posteriormente han marcado toda mi carrera profesional en el
+        ámbito de la tecnología sanitaria.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Formación</h2>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>Licenciado en Farmacia</h3>
+      <p>Universidad de Valencia · 1990 - 1996</p>
+    </div>
+
+    <div class="card">
+      <h3>Máster en Gestión Comercial y Marketing</h3>
+      <p>ESIC · 2004 - 2005</p>
+    </div>
+
+    <div class="card">
+      <h3>Máster en Gestión de Oficina de Farmacia</h3>
+      <p>Universidad de Barcelona · 2013 - 2015</p>
+    </div>
+
+    <div class="card">
+      <h3>Idiomas</h3>
+      <p>Español · Valenciano · Inglés</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Competencias clave</h2>
+
+  <div class="skills">
+    <div class="skill">Key Account Management</div>
+    <div class="skill">Tecnología médica</div>
+    <div class="skill">Diagnóstico por imagen</div>
+    <div class="skill">Medicina nuclear</div>
+    <div class="skill">Negociación hospitalaria</div>
+    <div class="skill">Contratación pública</div>
+    <div class="skill">Desarrollo de negocio</div>
+    <div class="skill">Relaciones institucionales</div>
+    <div class="skill">Lanzamiento de producto</div>
+  </div>
+</section>
+
+<section>
+  <div class="personal">
+    <img src="foto2.jpeg" alt="Bruno Miñana buceo">
 
     <div>
-      <img src="foto1.jpeg" alt="Bruno Miñana Martínez">
+      <h3>Más allá del entorno profesional</h3>
+      <p>
+        Profesional orientado a las relaciones humanas, el aprendizaje continuo
+        y el equilibrio entre innovación, salud y desarrollo personal.
+        <br><br>
+        Apasionado por el mar, la tecnología y el trabajo en equipo dentro
+        del entorno sanitario.
+      </p>
     </div>
+  </div>
+</section>
 
-  </header>
+<section id="contacto" class="contact">
+  <h2>Contacto</h2>
 
-  <section>
+  <p>📧 <a href="mailto:bruminana@gmail.com">bruminana@gmail.com</a></p>
+  <p>📱 <a href="tel:+34607754845">+34 607 754 845</a></p>
+  <p>
+    LinkedIn:
+    <a href="https://www.linkedin.com/in/bruno-miñana-martínez" target="_blank">
+      Bruno Miñana Martínez
+    </a>
+  </p>
+</section>
 
-    <h2 class="section-title">
-      Perfil ejecutivo
-    </h2>
-
-    <div class="grid-2">
-
-      <div class="card">
-        <h3>
-          Especialización
-        </h3>
-
-        <p>
-          Amplia experiencia en tecnología médica,
-          negociación hospitalaria, gestión de cuentas clave,
-          licitaciones y desarrollo comercial en compañías líderes del sector salud.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>
-          Áreas de conocimiento
-        </h3>
-
-        <p>
-          Radiología, medicina nuclear, cardiología,
-          neurología, farmacia hospitalaria, hemodinámica,
-          cirugía y soluciones diagnósticas avanzadas.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section id="experiencia">
-
-    <h2 class="section-title">
-      Experiencia profesional
-    </h2>
-
-    <div class="timeline">
-
-      <div class="job">
-        <h3>
-          FUJIFILM Healthcare
-        </h3>
-
-        <span>
-          División Modalities · Desde febrero 2026
-        </span>
-
-        <p>
-          Desarrollo comercial y gestión de soluciones
-          de tecnología médica orientadas al entorno hospitalario
-          y diagnóstico avanzado.
-        </p>
-      </div>
-
-      <div class="job">
-        <h3>
-          Territory Manager · Olympus Iberia
-        </h3>
-
-        <span>
-          Abril 2024 - Febrero 2026
-        </span>
-
-        <p>
-          Gestión territorial de productos y servicios médicos
-          en áreas quirúrgicas y ginecológicas.
-        </p>
-      </div>
-
-      <div class="job">
-        <h3>
-          Gerente de Cuentas KAM · GE Healthcare
-        </h3>
-
-        <span>
-          Abril 2000 - Febrero 2024
-        </span>
-
-        <p>
-          Gestión estratégica de cuentas hospitalarias en
-          radiología, cardiología, neurología,
-          medicina nuclear y farmacia hospitalaria.
-        </p>
-      </div>
-
-      <div class="job">
-        <h3>
-          Especialista en Nutrición y Fluidoterapia · Grifols
-        </h3>
-
-        <span>
-          Noviembre 1996 - Abril 2000
-        </span>
-
-        <p>
-          Soporte técnico y educativo en nutrición clínica,
-          fluidoterapia y cuidados críticos hospitalarios.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section>
-
-    <h2 class="section-title">
-      Competencias clave
-    </h2>
-
-    <div class="skills">
-
-      <div class="skill">
-        Key Account Management
-      </div>
-
-      <div class="skill">
-        Tecnología médica
-      </div>
-
-      <div class="skill">
-        Negociación hospitalaria
-      </div>
-
-      <div class="skill">
-        Desarrollo de negocio
-      </div>
-
-      <div class="skill">
-        Gestión comercial
-      </div>
-
-      <div class="skill">
-        Relaciones estratégicas
-      </div>
-
-    </div>
-
-  </section>
-
-  <section>
-
-    <div class="personal">
-
-      <img src="foto2.jpeg" alt="Bruno Miñana">
-
-      <div>
-
-        <h3>
-          Más allá del entorno profesional
-        </h3>
-
-        <p>
-          Profesional orientado a las relaciones humanas,
-          el aprendizaje continuo y el equilibrio entre innovación,
-          salud y desarrollo personal.
-          <br><br>
-          Apasionado por el mar, la tecnología y el trabajo
-          en equipo dentro del entorno sanitario.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section id="contacto" class="contact">
-
-    <h2>
-      Contacto
-    </h2>
-
-    <p>
-      📧
-      <a href="mailto:bruminana@gmail.com">
-        bruminana@gmail.com
-      </a>
-    </p>
-
-    <p>
-      📱
-      <a href="tel:+34607754845">
-        +34 607 754 845
-      </a>
-    </p>
-
-    <p>
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/bruno-miñana-martínez" target="_blank">
-        Bruno Miñana Martínez
-      </a>
-    </p>
-
-  </section>
-
-  <footer>
-    © 2026 Bruno Miñana Martínez · Healthcare & Medical Technology
-  </footer>
+<footer>
+  © 2026 Bruno Miñana Martínez · Healthcare & Medical Technology
+</footer>
 
 </body>
 </html>
